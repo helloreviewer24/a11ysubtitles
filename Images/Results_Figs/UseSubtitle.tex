@@ -1,0 +1,37 @@
+\begin{figure*}[h]
+\centering
+
+% \resizebox{\textwidth}{!}{
+\begin{tabular}{cc}
+
+\begin{tikzpicture}
+\begin{scope}[scale=0.50]
+% Pie chart 1
+\pie[text=pin]
+{64.4/Yes, 9.6/No, 16.4/Sometimes, 9.6/Depends on}
+ \end{scope}
+\end{tikzpicture}
+&
+% Pie chart 2
+\begin{tikzpicture}
+\begin{scope}[scale=0.50]
+\pie[
+    %pos = {8,0},
+    % rotate = 120,
+    text=pin]
+{45.4/Yes, 10.9/No, 37.6/Sometimes, 6.1/Depends on}
+ \end{scope}
+\end{tikzpicture}\\
+\textbf{Hearing Group A} & \textbf{Hearing Group B} \\ 
+\multicolumn{2}{c}{\textbf{(Q)} Do you feel that the amount of teaching content you have taught} \\
+  % \textbf{(F)} Do you use subtitles while watching movies, TV shows, or on video platforms?
+
+
+\end{tabular}
+
+% }
+
+ \caption{Add Caption here.}
+\label{fig:sentimentAnalyzerVoting}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

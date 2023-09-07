@@ -1,0 +1,67 @@
+% \begin{figure}
+% \centering
+% %\resizebox{\columnwidth}{!}{
+% \begin{tikzpicture}
+% \begin{scope}[scale=0.7,align=center,font=\scriptsize]
+% \pie[text=pin]
+% {12.26/IoT Traffic\\Dataset,
+%  73.58/Traditional IP-based \\ Dataset, 
+% 14.15/Both\\Dataset
+% }
+% %13 =>IoT Traffic
+% %78=> General
+% %15=> both
+% %3 is empty
+% \end{scope}
+% \end{tikzpicture}%}
+% \caption{Distribution of dataset architecture types in primary studies.}
+% \label{fig:rq1-1}
+% \end{figure}
+
+\begin{figure*}[h]
+\centering
+
+% \resizebox{\textwidth}{!}{
+\begin{tabular}{cc}
+
+\begin{tikzpicture}
+\begin{scope}[scale=0.7,align=center,font=\scriptsize]
+% Pie chart 1
+\pie[text=pin]
+{50.7/Yes,
+8.2/No,
+6.8/Sometimes, 
+16.4/Depends on the game,
+8.2/I do not play video games,
+9.6/The games I play do\\not offer subtitles}
+ \end{scope}
+\end{tikzpicture}
+&
+% Pie chart 2
+\begin{tikzpicture}
+\begin{scope}[scale=0.7,align=center,font=\scriptsize]
+\pie[
+    %pos = {8,0},
+    % rotate = 120,
+    text=pin]
+{26.1/Yes, 
+22.6/No, 
+14.8/Sometimes, 
+19.6/Depends on the game, 11.5/I do not play video games, 
+5.4/The games I play do\\not offer subtitles
+}
+\end{scope}
+\end{tikzpicture}\\
+\textbf{Group A} & \textbf{Group B} \\ 
+\multicolumn{2}{c}{\textbf{(Q)} Do you use subtitles while playing video games?} \\
+  % \textbf{(F)} Do you use subtitles while watching movies, TV shows, or on video platforms?
+
+
+\end{tabular}
+
+% }
+
+ \caption{Distribution of participants' responses to the use of subtitles while playing video games.}
+\label{fig:sentimentAnalyzerVoting}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

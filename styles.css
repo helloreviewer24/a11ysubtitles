@@ -1,0 +1,384 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 210px;
+    width: 100%;
+    top: 0;
+    position:relative;
+    background-color: #1c747d;
+    display: flex;
+    justify-content: center;
+    isolation: isolate;
+}
+
+*{margin:0px; padding:0px;}
+.img{ float:left; width:50%; text-align:center;}
+.img img{ width:90%;}
+.img h3{ display:block;}
+
+
+.darkmode--activated header, .darkmode--activated footer, .darkmode--activated .main_img_holder{
+    filter: invert(1);
+  }
+
+.darkmode--activated main{
+    background-color: rgb(210, 210, 210);
+}
+
+.darkmode--activated button{
+    filter: invert(1);
+}
+header p{
+    text-align: center;
+    font-size: 2rem;
+    max-width: 650px;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: aliceblue;
+    text-shadow: 2px 2px 2px #000000;
+}
+.header_img{
+    z-index: -1;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    
+
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: #1c747d;
+    bottom: 0;
+    position:relative;
+    isolation: isolate;
+    text-align: center;
+}
+.footer_text{
+    color: aliceblue;
+    padding-top: 12px;
+    margin: 0;
+}
+main{
+}
+
+.main_container{
+    padding: 4rem;
+}
+.main_title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.main_text{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.main_text span{
+    font-weight:bolder;
+}
+.research{
+    margin-top: 4rem;
+}
+
+.main_buttons{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 2rem 0;
+    gap: 1rem;
+}
+
+.ref_button{
+    border-radius: 8px;
+    background-color: #1c747d;
+    border: none;
+    margin: 0 1rem 0 1rem;
+    width: 300px;
+    height: 50px;
+}
+.ref_button a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+
+.darkmode-layer, .darkmode-toggle {
+    z-index: 100;
+  }
+
+.img_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}  
+.img_title{
+    text-align: center;
+}
+
+.main_img_holder{
+    height: 70%;
+    width: 70%;
+    padding: 0 4rem 2rem 4rem;
+}
+.people_icon{
+    margin-right: 1rem;
+}
+.authors_names{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+.authors_names span{
+    font-weight: bolder;
+    margin-right: 5px;
+}
+.authors_names i{
+    color:#248995;
+}
+.darkmode--activated .authors_names i,.darkmode--activated .year i{
+    filter: invert(1);
+}
+
+.refrence_container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.year{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.year i{
+    margin-right: 1rem;
+    color:#248995;
+}
+.refrence_link{
+    border: 1px solid #2c8f9a;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #2c8f9a;
+    padding: 5px 8px 5px 8px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.refrence_link:hover{
+    color:aliceblue;
+    background-color: #248995;
+}
+.darkmode--activated .refrence_link{
+    filter: invert(1);
+}
+
+@media (max-width: 750px){
+    header{
+        height: 100px;
+    }
+    header p{
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        padding: 0 1rem;
+    }
+    .main_container{
+        padding: 1rem;
+    }
+    .main_text{
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .main_buttons{
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+    .main_img_holder{
+        height: 100%;
+        width: 100%;
+        padding: 0 1rem 2rem 1rem;
+    }
+    .authors_names{
+        font-size: 1rem;
+    }
+    .year{
+        font-size: 1rem;
+    }
+    
+}
+
+
+
+/* ------ Modal styles -------- */
+
+/* Modal section for Citation */
+.simpleModal{
+    /* padding: 0 10rem; */
+    /* color: #e0e0e0; */
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    /* height: 100%;
+    width: 100%; */
+    /* overflow: auto; */
+    background-color: #00000092;
+
+}
+.modal-content{
+    background-color:#bcbcbc;
+    border-radius: 15px;
+    margin: 200px auto;
+    padding: 20px;
+    width: 490px !important;
+    height: 440px !important;
+    /* overflow-x: auto; */
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.4), 0 7px 20px 0 rgba(0,0,0,0.3);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+
+
+}
+@keyframes modalopen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.citation_content{
+    width: 10000px; 
+    margin-left: 10px;
+    
+}
+
+.modal-content h3{
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 0px;
+    font-family: raleway;
+    color:rgb(67, 67, 67);
+    font-size: 2rem;
+    
+}
+.citation_box{
+    background-color: #175161;
+    overflow: scroll;
+    margin-top: 40px;
+    height: 270px;
+    border-radius: 6px;
+}
+pre{top:0;
+white-space:unset;}
+
+.closeBtn{
+    color:#6e6e6e;
+    position: absolute;
+    font-size: 30px;
+    margin-top: -15px;
+    margin-left: 430px;
+}
+.closeBtn:hover, .closeBtn:focus{
+    color:#1c242e;
+    text-decoration: none;
+    cursor: pointer;
+}
+code{
+    color:#e0e0e0 !important;
+    text-align: left;
+    white-space: pre-line;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+.citation_copy{
+    color:#e0e0e0;
+    background: #258973;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.citation_copy:hover{
+    background-color:#2b6777;
+    
+
+}
+/* .citation_copy:focus{
+    background-color:#2b6777;
+} */
+.citation_download{
+    color:#e0e0e0;
+    background: #258973;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 20px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+.citation_download_link{
+    color:#e0e0e0  !important;
+    text-decoration: none;
+    
+}
+.citation_download:hover{
+    background-color:  #175161;
+}
+
+.copy_text{
+    display: none;
+    color:#175161; 
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+    
+}
+.copy_text_show{
+    display: block;
+}
+.modal_button_container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+@media (max-width: 700px){
+    .modal-content{
+        border-radius: 15px;
+        margin: 200px auto;
+        padding: 20px;
+        width: 360px !important;
+        height: 350px !important;
+    }
+    .modal-content h3{
+        position: absolute;
+        margin-left: 100px;
+        margin-top: 0px;
+        font-size: 1.5rem;
+        
+    }
+    .closeBtn{
+        position: absolute;
+        font-size: 30px;
+        margin-top: -15px;
+        margin-left: 80%;
+    }
+    
+    
+}
+
+

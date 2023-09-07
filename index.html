@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyzing Accessibility Reviews</title>
+  <!-- fav icon -->
+  <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- font-awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .img {
+    float: left;
+    width: 40%;
+    text-align: center;
+  }
+  .img img {
+    width: 90%;
+  }
+  .img h3 {
+    display: block;
+  }
+  </style>
+
+<body>
+  <header>
+    <img src="assets/header.png" alt="header people with mask" class="header_img" />
+    <!-- main title on top -->
+    <p>
+      Accessible Gaming Through Standardized Subtitling: A Study on User Preferences and Inclusivity for Deaf and Hard
+      of Hearing Individuals
+    </p>
+  </header>
+  <main>
+    <div class="main_container">
+      <!-- <div class="authors_container">
+          <p class="authors_names">
+            <i class="fa-solid fa-users people_icon"></i
+            ><span>Authors:</span> Alberto D. A. Oliveira and Paulo S. H. Dos
+            Santos, Wilson E. Marcilo Junior, Wajdi Aljedaani, Danilo M. Eler,
+            Marcelo M. Eler
+          </p>
+          <p class="year"><i class="fa-solid fa-calendar-days"></i>Year 2023</p>
+        </div> -->
+      <!-- <div class="refrence_container">
+          <a
+            href="assets/paper_acc_reviews_visual_disabilities.pdf"
+            target="_blank"
+            class="refrence_link"
+            >PDF</a
+          >
+         
+          <a class="modalBtn button refrence_link" onclick="openCitation(1)">
+            Cite
+          </a>
+          <div class="simpleModal modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <h3>Cite</h3>
+              <div class="citation_box">
+                <div class="citation_content">
+                  <pre>
+                    <code>    @article{
+                      
+                    
+                    
+                    }
+                    }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            
+              <div class="modal_button_container">
+                <button class="citation_copy" onclick="copyText(1)">
+                  Copy
+                </button>
+                <button class="citation_download">
+                  <a
+                    class="citation_download_link"
+                    href="/assets/cite.bib"
+                    alt="Citation download"
+                    target="_blank"
+                    >Download</a
+                  >
+                </button>
+              </div>
+              <p class="copy_text">the citation has been copied</p>
+            </div>
+          </div>
+          
+          <a href="#" target="_blank" class="refrence_link">DOI</a>
+          <a href="#" target="_blank" class="refrence_link"
+            >Replicate Package (DateSet)</a
+          >
+        </div> -->
+      <p class="main_title">Abstract</p>
+      <p class="main_text">
+        As the prevalence of video games rises, demands for enhanced quality, narrative variety, and increased
+        accessibility have increased. This study emphasizes the importance of standardized subtitling in video games for
+        all users, including those with disabilities. Beginning with analyzing current subtitling practices, this study
+        reveals the lack of industry-wide standards. An exhaustive survey focused on text contrast, font size, line
+        length, character identification, and color to collect data on the preferences of various demographic groups
+        concerning subtitles. The data accumulated over four months from diverse participants revealed potential
+        standards. This study provides an overview of the methodological approach, participant demographics, data
+        acquisition and analysis, privacy safeguards, and survey question rationale. It concludes with an overview of
+        the findings. It makes a case for future work on subtitling standards, emphasizing the urgency of such measures
+        for more inclusive and accessible gaming experiences.
+      </p>
+      
+      <p class="main_title research">Research Questions</p>
+      <p class="main_text">
+        <span>RQ1: Text Contrast?</span>
+      </p>
+
+
+      <div class="img_container">
+
+        <div class="eldersaac">
+          <div class="container">
+            <div class="img" > <img src="Images/Survey Images/1/Q1-img1.jpg" id="elder"  />
+              <p>(a) Drop Shadow</p>
+            </div>
+            <div class="img"> <img src="Images/Survey Images/1/Q1-img2.jpg" id="saac" />
+              <p>(b) Stroke</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="eldersaac">
+          <div class="container">
+            <div class="img"> <img src="Images/Survey Images/1/Q1-img3-V1.jpg" id="elder" />
+              <p>(c) Semi Transparent Box</p>
+            </div>
+            <div class="img"> <img src="Images/Survey Images/1/Q1-img3.jpg" id="saac" />
+              <p>(d) No Text Contrast</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="eldersaac">
+          <div class="container">
+            <div class="img"> <img src="Images/Survey Images/1/Q1-img4.jpg" id="elder" />
+              <p>(e) Black Box</p>
+            </div>
+            <!-- <div class="img"> <img src="Images/Survey Images/1/Q1-img2.jpg" id="saac" />
+              <p>(b) Stroke</p>
+            </div> -->
+          </div>
+        </div>
+  
+        </div>
+
+        <p class="main_text">
+          <span>RQ2: Font Weight.?</span>
+        </p>
+  
+        <div class="img_container">
+  
+          <div class="eldersaac">
+            <div class="container">
+              <div class="img" > <img src="Images/Survey Images/3/Q3-img1.jpg" id="elder"  />
+                <p>(a) Normal</p>
+              </div>
+              <div class="img"> <img src="Images/Survey Images/3/Q3-img2.jpg" id="saac" />
+                <p>(b) Bold</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="eldersaac">
+            <div class="container">
+              <div class="img"> <img src="Images/Survey Images/3/Q3-img3.jpg" style="float: center;"/>
+                <p>(c) Italicized</p>
+              </div>
+              
+            </div>
+          </div>
+    
+        
+    
+          </div>
+
+          <p class="main_text">
+            <span>RQ3: Font Type?</span>
+          </p>
+    
+          <div class="img_container">
+    
+            <div class="eldersaac">
+              <div class="container">
+                <div class="img" > <img src="Images/Survey Images/2/Q2-img1.jpg" id="elder"  />
+                  <p>(a) Serif - Times</p>
+                </div>
+                <div class="img"> <img src="Images/Survey Images/2/Q2-img2.jpg" id="saac" />
+                  <p>(b) Sans Serif - Arial</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="eldersaac">
+              <div class="container">
+                <div class="img"> <img src="Images/Survey Images/2/Q2-img3.jpg" style="float: center;"/>
+                  <p>(c) Hand script Print - Burdown</p>
+                </div>
+
+                <div class="img"> <img src="Images/Survey Images/2/Q2-img4.jpg" id="saac" />
+                  <p>(d) Hand script Cursive - Peachy</p>
+                </div>
+                
+              </div>
+            </div>
+      
+          
+      
+            </div>
+
+            <p class="main_text">
+              <span>RQ4: Font size?</span>
+            </p>
+      
+            <div class="img_container">
+      
+              <div class="eldersaac">
+                <div class="container">
+                  <div class="img" > <img src="Images/Survey Images/4/Q4-img1.jpg" id="elder"  />
+                    <p>(a) Small - 16pt</p>
+                  </div>
+                  <div class="img"> <img src="Images/Survey Images/4/Q4-img2.jpg" id="saac" />
+                    <p>(b) Medium - 20pt</p>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="eldersaac">
+                <div class="container">
+                  <div class="img"> <img src="Images/Survey Images/4/Q4-img3.jpg" style="float: center;"/>
+                    <p>(c) Large - 24pt</p>
+                  </div>
+  
+                  <div class="img"> <img src="Images/Survey Images/4/Q4-img4.jpg" id="saac" />
+                    <p>(d) Extra Large - 28pt</p>
+                  </div>
+                  
+                </div>
+              </div>
+        
+            
+        
+              </div>
+
+           
+
+            <p class="main_text">
+              <span>RQ5: Line Length?</span>
+            </p>
+      
+            <div class="img_container">
+      
+              <div class="eldersaac">
+                <div class="container">
+                  <div class="img" > <img src="Images/Survey Images/5/Q5-img1.jpg" id="elder"  />
+                    <p>(a) Single Line
+                    </p>
+                  </div>
+                  <div class="img"> <img src="Images/Survey Images/5/Q5-img2.jpg" id="saac" />
+                    <p>(b) Two Lines</p>
+                  </div>
+                </div>
+              </div>
+        
+              
+        
+            
+        
+              </div>
+
+
+              <p class="main_text">
+                <span>RQ6: Character Identification.?</span>
+              </p>
+        
+              <div class="img_container">
+        
+                <div class="eldersaac">
+                  <div class="container">
+                    <div class="img" > <img src="Images/Survey Images/8/Q8-Img1.jpg" id="elder"  />
+                      <p>a) Character Identification with Colors
+                      </p>
+                    </div>
+                    <div class="img"> <img src="Images/Survey Images/8/Q8-Img2.jpg" id="saac" />
+                      <p>(b) Character Identification with Names</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="eldersaac">
+                  <div class="container">
+                    <div class="img" > <img src="Images/Survey Images/8/Q8-Img3.jpg" id="elder"  />
+                      <p>(c) Character Identification with Names and Colors
+                      </p>
+                    </div>
+                    <div class="img"> <img src="Images/Survey Images/8/Q8-Img4.jpg" id="saac" />
+                      <p>(d) Character Identification with Hyphens</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="eldersaac">
+                  <div class="container">
+                    <div class="img" > <img src="Images/Survey Images/8/Q8-Img5.jpg" id="elder"  />
+                      <p>(e) Character Identification with Hyphens and Names
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+          
+                
+          
+              
+          
+                </div>
+
+
+                <p class="main_text">
+                  <span>RQ7: Subtitle Color?</span>
+                </p>
+          
+                <div class="img_container">
+          
+                  <div class="eldersaac">
+                    <div class="container">
+                      <div class="img" > <img src="Images/Survey Images/6/Q6-Img1.jpg" id="elder"  />
+                        <p>(a) White
+                        </p>
+                      </div>
+                      <div class="img"> <img src="Images/Survey Images/6/Q6-img2.jpg" id="saac" />
+                        <p>(b) Black</p>
+                      </div>
+                    </div>
+                  </div>
+            
+
+                  <div class="eldersaac">
+                    <div class="container">
+                      <div class="img" > <img src="Images/Survey Images/6/Q6-img3.jpg" id="elder"  />
+                        <p>(a) Yellow
+                        </p>
+                      </div>
+                      <div class="img"> <img src="Images/Survey Images/6/Q6-img4.jpg" id="saac" />
+                        <p>(b) Blue</p>
+                      </div>
+                    </div>
+                  </div>
+            
+                  
+            
+                
+            
+                  </div>
+
+
+                  <p class="main_text">
+                    <span>RQ8: Differentiating Dialogues by Color.</span>
+                  </p>
+            
+                  <div class="img_container">
+            
+                    <div class="eldersaac">
+                      <div class="container">
+                        <div class="img" > <img src="Images/Survey Images/7/Q7-Img1.jpg" id="elder"  />
+                          <p>(a) White and White (No contrast)
+                          </p>
+                        </div>
+                        <div class="img"> <img src="Images/Survey Images/7/Q7-img2.jpg" id="saac" />
+                          <p>(b) Blue and White</p>
+                        </div>
+                      </div>
+                    </div>
+              
+  
+                    <div class="eldersaac">
+                      <div class="container">
+                        <div class="img" > <img src="Images/Survey Images/7/Q7-img3.jpg" id="elder"  />
+                          <p>(a) Yellow and White
+                          </p>
+                        </div>
+                        <div class="img"> <img src="Images/Survey Images/7/Q7-img4.jpg" id="saac" />
+                          <p>(b) Blue and Yellow</p>
+                        </div>
+                      </div>
+                    </div>
+              
+                    
+              
+                  
+              
+                    </div>
+      
+    
+  
+     
+    </div>
+    
+
+      
+     
+    
+  </main>
+  <footer>
+    <p class="footer_text">&copy; 2022 All rights reserved. All Authors</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script src="modal.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+\pgfplotstableread[col sep=comma,header=false]{
+Drop Shadow,36,51,13,20
+Stroke,41,49,10,19
+Black Box,38,48,14,36
+Semi-Transparent Box,39,49,12,25
+No Text Contrast,39,49,12,25
+
+}\data
+
+\pgfplotstablecreatecol[
+    create col/expr={
+        \thisrow{1} + \thisrow{2} + \thisrow{3}
+    }
+]{sum}{\data}
+
+\pgfplotsset{
+    percentage plot/.style={
+        point meta=explicit,
+    every node near coord/.append style={
+        align=center,
+        text width=1cm
+    },
+        nodes near coords={
+        \pgfmathtruncatemacro\iszero{\originalvalue==0}
+        \ifnum\iszero=0
+            \pgfmathprintnumber[precision=0]{\originalvalue}$\,\%$%\\ \pgfmathprintnumber[fixed zerofill,precision=1]{\pgfplotspointmeta}
+        \fi},
+    nodes near coords align=vertical,
+        yticklabel=\pgfmathprintnumber{\tick}\,$\%$,
+        ymin=0,
+        ymax=100,
+        enlarge y limits={upper,value=0.18},
+    visualization depends on={y \as \originalvalue}
+    },
+    percentage series/.style={
+        table/y expr=\thisrow{#1}/\thisrow{sum}*100,table/meta=#1
+    }
+}
+
+\begin{figure*}[h!]
+     \centering
+     
+\resizebox{\textwidth}{!}{
+%\begin{adjustbox}{width=0.7\textwidth}
+\begin{tikzpicture}
+\begin{axis}[
+    axis on top,
+    width=20cm,
+    height=10cm,
+    legend style={at={(0.5,0.95)},
+    anchor=north,legend columns=-1},
+    percentage plot,ybar,bar width=0.75cm,
+    enlarge x limits=0.15,
+    symbolic x coords={Drop Shadow,Stroke,Black Box,Semi,No Text},
+    xtick=data
+    %,xticklabel style={rotate=20}
+]
+\addplot[red,pattern=horizontal lines,pattern color=red] table [percentage series=1] {\data};
+\addplot[blue,pattern=north east lines,pattern color=blue] table [percentage series=2] {\data};
+% \addplot[Mygrey,pattern=dots,pattern color=Mygrey] table [percentage series=3] {\data};
+% \addplot[Mygreen,pattern=grid,pattern color=Mygreen] table [percentage series=4] {\data};
+\legend{Group A, Group B}
+\end{axis}
+\end{tikzpicture}
+%\end{adjustbox}
+ }
+ \caption{Which one is group A which is Group B?}
+\label{fig:TimelineResults}
+\end{figure*}

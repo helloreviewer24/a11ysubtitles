@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[h!]
+     \centering
+     \begin{tabular}{W{c}{0.18\textwidth}W{c}{0.18\textwidth}W{c}{0.18\textwidth}W{c}{0.18\textwidth}W{c}{0.18\textwidth}}
+\begin{subfigure}[b]{0.35\linewidth}
+ \begin{tikzpicture}[scale=0.80,line join=round, font=\small]
+  \pie[radius= 1.6, rotate=180, text=inside] {10/Yes, 90/No}
+ \end{tikzpicture}
+\end{subfigure}
+&
+\begin{subfigure}[b]{0.35\linewidth}
+ \begin{tikzpicture}[scale=0.80,line join=round, font=\small]
+  \pie[radius= 1.6, rotate=180, text=inside] {20/Yes, 80/No}
+ \end{tikzpicture}
+\end{subfigure}
+&
+\begin{subfigure}[b]{0.35\linewidth}
+ \begin{tikzpicture}[scale=0.80,line join=round, font=\small]
+  \pie[radius= 1.6, rotate=180, text=inside] {10/Yes, 90/No}
+ \end{tikzpicture}
+\end{subfigure}
+&
+\begin{subfigure}[b]{0.35\linewidth}
+ \begin{tikzpicture}[scale=0.80,line join=round, font=\small]
+  \pie[radius= 1.6, rotate=180, text=inside] {30/Yes, 70/No}
+ \end{tikzpicture}
+\end{subfigure}
+&
+\begin{subfigure}[b]{0.35\linewidth}
+ \begin{tikzpicture}[scale=0.80,line join=round, font=\small]
+  \pie[radius= 1.6, rotate=180, text=inside] {20/Yes, 70/No, 10/Don't know}
+ \end{tikzpicture}
+\end{subfigure}
+\\ 
+\textbf{(A)} & \textbf{(B)} & \textbf{(C)} & \textbf{(D)} & \textbf{(E)} \\
+\end{tabular}
+
+\begin{tabular}{p{0.9\textwidth}}
+\textbf{(A)} Was accessing and navigating the Blackboard platform and using the various functions easy for you?\\
+\textbf{(B)} Do you create all the text portions in sizes large enough to be easily seen and distinguished?\\
+\textbf{(C)} Do you know how to design course materials that has the accessibility guidelines for remote courses for deaf students?\\
+\textbf{(D)} Are you able to access all the contents of your classes on Blackboard?\\
+\textbf{(E)} If tables and pictures are added, do you add an explanation of the picture and table?
+\end{tabular}
+%  \floatfoot{\textbf{(a)} Was accessing and navigating the Blackboard platform and using the various functions easy for you?}\\
+%  \floatfoot{\textbf{(b)} Do you create all the text portions in sizes large enough to be easily seen and distinguished?}\\
+%  \floatfoot{\textbf{(c)} Do you know how to design course materials that has the accessibility guidelines for remote courses for deaf students?}\\
+%  \floatfoot{\textbf{(d)} Are you able to access all the contents of your classes on Blackboard?}\\
+%  \floatfoot{\textbf{(e)} If tables and pictures are added, do you add an explanation of the picture and table?}\\
+%\vspace{-0.4cm}
+ \caption{Responses to questions regarding to accessibility aspect.}
+%\vspace{-0.4cm}
+\label{fig:A11y_Questions}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{figure}[h!]
+% \begin{tikzpicture}
+%     \node [anchor=north west] (imgA) at (.05\linewidth, .050\linewidth){\includegraphics[width=.5\linewidth]{figA.pdf}};
+%     \draw [anchor=north west] (0., .000\linewidth) node {(A)};
+%     \node [anchor=north west] (imgB) at (.05\linewidth, .500\linewidth){\includegraphics[width=.\linewidth]{figB.pdf}};
+%     \draw [anchor=north west] (0., .500\linewidth) node {(A)};
+% \end{tikzpicture}\
+% \end{figure}
+
+\begin{figure}
+\subfloat[Flower one.]{\includegraphics[width=.45\linewidth]{example-image-a}\label{fig:f2}} 
+\subfloat[Flower one.]{ \includegraphics[width=.45\linewidth]{example-image-b}\label{fig:f2}}
+\\
+\subfloat[Flower one.]{\includegraphics[width=.45\linewidth]{example-image-a}\label{fig:f2}} 
+\subfloat[Flower one.]{ \includegraphics[width=.45\linewidth]{example-image-b}\label{fig:f2}}
+
+\caption{MWE to demonstrate how to place to images side-by-side}
+\end{figure}
